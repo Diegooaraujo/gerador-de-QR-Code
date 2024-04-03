@@ -5,6 +5,9 @@ const inputValue = document.querySelector("#qr-form input")
 
 const imagem = document.querySelector("#qr-code img")
 
+const degrade = document.querySelector(".box-degrade")
+
+
 //eventos
 function generateQrCode(){
     const valueInput = inputValue.value
@@ -15,11 +18,18 @@ function generateQrCode(){
     imagem.addEventListener("load", ()=>{
         conteiner.classList.add("active");
         qrCodeBtn.innerHTML ="Codigo Criado"
+        degrade.style.height = "510px"
+        
     })
+    
 }
+
+
+
 
 qrCodeBtn.addEventListener("click",()=>{
     generateQrCode()
+    
 })
 inputValue.addEventListener("keydown",(e)=>{
     if(e.code === "Enter"){
@@ -35,5 +45,6 @@ inputValue.addEventListener("keyup", ()=>{
     if(!inputValue.value){
         conteiner.classList.remove("active")
         qrCodeBtn.innerHTML ="Gerar QR Code"
+        degrade.style.height="270px"
     }
 })
