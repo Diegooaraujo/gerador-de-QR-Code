@@ -1,2 +1,2 @@
-gerador-de-qr-code-rouge.vercel.app
+https://gerador-de-qr-code-rouge.vercel.app
  
